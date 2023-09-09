@@ -28,7 +28,7 @@ function SendMessage() {
 
       //createdAtをcreateAtと入力してしまっていたためデータが表示されないエラーに悩まされた
       //気をつけて!!
-      
+
     });
 
     setMessages("");
@@ -41,12 +41,19 @@ function SendMessage() {
     <div>
       <form onSubmit={sendMessage}>
         <div className='sendMsg'>
-          <Input placeholder='メッセージを入力してください' 
+          <Input style={{
+                        width: "78%",
+                        fontSize: "15px",
+                        fontWeight: "550",
+                        marginLeft: "5px",
+                        fmarginBottom: "-3px",
+                        }}
+                 placeholder='メッセージを入力してください' 
                  type='text' 
                  onChange={(e) => setMessages(e.target.value)}
                  value = {message}
           />
-          <Send onClick={sendMessage} style={{cursor:"pointer"}}/>
+          <Send onClick={sendMessage} style={{color: "#7AC2FF", marginLeft: "20px" ,cursor:"pointer"}}/>
         </div>
       </form>
     </div>
